@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>lab22</title>
+    <script>
+			function userbrows(){
+				var id;
+				id=window.open("","example","width=800,height=500");
+				id.focus();
+				id.document.open();
+				id.document.write("Ваш браузер - " + navigator.appName);
+				id.document.write("<br><br>");
+				id.document.write("Если написано NetScape, то это потому что navigator.appName возвращает именно это имя.")
+				id.document.write("<br><br>");
+				id.document.write("Версия вашего browser: " + navigator.appVersion);
+				id.document.write("<br><br>");
+				var brver = navigator.appVersion;
+				if (brver.search("Chrome")!= -1 ) {
+					id.document.write("Вы счастивый пользватель браузера Chrome!<br>");
+					id.document.write("В данном браузере будут работать все скрипты.<br>");
+				}
+				else if (brver.search("Edge")!= -1 ) {
+						id.document.write("У вас браузер Edge");
+					}
+					else if (brver.search("WOW64")!= -1 ) {
+							id.document.write("У вас браузер Explorer");
+						}
+						else {
+							id.document.write("У вас Браузер...");
+						}
+				id.document.close();
+			}
+      function heading(){
+        var id;
+        	id=window.open("","example","width=800,height=500");
+          id.focus();
+  				id.document.open();
+  				id.document.write("Глава 1 Вечерние развлечения");
+          id.document.write("<br>");
+          id.document.write  ("Глава 2 Спор. 1 янв");
+          id.document.write("<br>");
+          id.document.write("Глава 3 побег");
+          id.document.write("<br>");
+          id.document.write  ("Глава 4 добро пожаловать в игру");
+          id.document.write("<br>");
+          id.document.write("Глава 5 гнолы и инквизитор");
+          id.document.write("<br>");
+          id.document.write  ("Глава 6 Больница Николая Чудотворца");
+          id.document.write("<br>");
+          id.document.write("Глава 7 Десятый пациент");
+          id.document.write("<br>");
+          id.document.write  ("Глава 8 Тренировочный боё");
+          id.document.write("<br>");
+          id.document.write("Глава 9 новое задание");
+          id.document.write("<br>");
+          id.document.write  ("Глава 10 сварливый гном");
+          id.document.write("<br>");
+          id.document.write("Глава 11 дом Мудрости");
+          id.document.write("<br>");
+          id.document.write  ("Глава 12 Неожиданный союзник");
+        }
+        function author(){
+          if (confirm("Авторы: Гоблин - МеХХanik, Каин")) {
+              alert("Как-то так")
+            } else {
+              alert("других нет")
+            }
+
+        }
+        function promotion(){
+          var name=prompt('Введите свое имя?',100)
+  alert('Привет '+name+' приятно видеть вас!')
+
+        }
+		</script>
+    <style>
+    body{
+      background:url(bg1.svg) no-repeat;
+    }
+    .frontpage{
+      position:absolute;
+      top:40px;
+      left:10px;
+    }
+    .annot{
+      font-size: 20pt;
+      color: rgb(240, 58, 200);
+      width:500px;
+      position: absolute;
+      top:0px;
+      left:290px;
+    }
+    </style>
+  </head>
+  <body onload ="promotion()">
+    <button type="button" name="verbrouse" value="brouser" onclick="userbrows()">версия браузера</button>
+    <img src="trick.jpg" class="frontpage">
+    <div class="annot">
+      <p>А что если волшебный мир существует? Рядом с обычными людьми ходят упыри,
+        хитрые гномы стоят за прилавком, злобные огры толкутся у пивного ларька,
+         гноллы прячутся в темных переулках и дивные суккубы пьют души растяп, подсев к ним в баре.
+          Что если сказки не врут и однажды ты не просто сможешь увидеть темную сторону этого мира,
+           но и сам станешь частью легенды?<br>
+           Еще вчера я был обычным человеком, сегодня стал смертником,
+           и как знать, вдруг завтра смогу получить у судьбы помилование.
+           Или узнаю, что она приготовила мне другую роль.</p>
+    </div>
+      <button type="button" name="heading" value="heading" onclick="heading()">оглавление</button>
+        <button type="автор" name="автор" value="автор" onclick="author()">автор</button>
+        
+  </body>
+</html>

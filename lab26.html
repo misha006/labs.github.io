@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>lab26</title>
+    <script type="text/javascript">
+    var i = 0;
+	var flag1;
+	var id1;
+	function movie() {
+	    eval("document.images[0].src='gr0" + i + ".jpg';");
+	    i++;
+	    if (i > 6) i = 0;
+	    id1 = setTimeout("movie(); ", 1000);
+	}
+
+  </script>
+  <style >
+    body
+    {
+      background:url(paper.svg) no-repeat ;
+    }
+  </style>
+
+
+</head>
+
+<body onload="movie();">
+    <img id="myImage" src="" alt="" /><br /><br />
+    <input type="button" value="Start/Stop"
+        onclick="if (flag1 == 0)
+                    { id1 = setTimeout('movie(); ', 1000); flag1 = 1; }
+                else
+                    { clearTimeout(id1); flag1 = 0; }; " />
+
+
+
+
+</body>
+
+</html>

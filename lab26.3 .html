@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <style>
+    .mainmenubtn {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+    }
+    .mainmenubtn:hover {
+    background-color: red;
+    }
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+    .dropdown-child {
+    display: none;
+    background-color: black;
+    min-width: 200px;
+    }
+    .dropdown-child a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    }
+    .dropdown:hover .dropdown-child {
+    display: block;
+    }
+    body{
+    background: url(paper.svg);
+    background-size: cover;
+    }
+    </style>
+  </head>
+  <body>
+
+    <div class="dropdown">
+    <button class="mainmenubtn">Задания работы 26</button>
+    <div class="dropdown-child">
+    <a href="lab26.1.html">задание 1</a>
+    <a href="lab26.html">задание 2</a>
+    <a href="lab26.2.html">Задание 3</a>
+    <a href="lab26.3.html">Задание 4</a>
+    </div>
+    </div>
+  </body>
+</html>

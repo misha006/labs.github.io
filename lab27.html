@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>lab27</title>
+    <style>
+      .d1 {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      float: left;
+      }
+      .d2 {
+      position: absolute;
+      top: 30px;
+      right: 400px;
+      }
+      .d3 {
+      position: absolute;
+      top: 30px;
+      left: 500px;
+      }
+      body {
+      background: url(bg.jpg);
+      }
+    </style>
+    <script>
+      var flag = 0;
+      function ichange() {
+      if (flag == 0) {
+      document.i1.src = "gr04.jpg";
+      flag = 1;
+      }
+      else {
+      document.i1.src = "gr03.jpg";
+      flag = 0;
+      }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="d1">
+    <img src="gr00.jpg"
+    onmouseout="this.src='gr01.jpg'"
+    onmouseover="this.src='gr05.jpg'">
+    </div>
+    <div class="d2">
+    <img src="gr02.jpg"
+    onmouseout="this.src='gr02.jpg'"
+    onmouseover="this.src='BCW.jpg'">
+    </div>
+    <div class="d3">
+    <a href="javascript: ichange(); void(0); ">
+    <img name="i1" src="gr04.jpg" boder="0" width="500" height="333" alt="" />
+    </a>
+    </div>
+  </body>`
+</html>

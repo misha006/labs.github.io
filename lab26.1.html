@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>JavaScript Animation</title>
+  <script type="text/javascript">
+      var i = 0;
+      function movie() {
+          eval("document.images[0].src='gr0" + i + ".jpg';");
+          i++;
+          if (i < 6) {
+              setTimeout("movie();", 1000);
+          }
+      }
+
+  </script>
+  <style >
+    body
+    {
+      background:url(bg1.svg) no-repeat ;
+    }
+  </style>
+
+</head>
+
+<body onload="movie();">
+
+     <img id="myImage" src="" alt="" />
+
+</body>
+</html>
